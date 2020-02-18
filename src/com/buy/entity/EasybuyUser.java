@@ -1,54 +1,75 @@
 package com.buy.entity;
 
-public class EasybuyUser {
-    private int id;
-    private String loginName;
-    private String userName;
+import java.io.Serializable;
+
+/**
+ * (EasybuyUser)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:44:05
+ */
+public class EasybuyUser implements Serializable {
+    private static final long serialVersionUID = 188993921847856641L;
+    /**
+    * 主键
+    */
+    private Integer id;
+    /**
+    * 登录名
+    */
+    private String loginname;
+    /**
+    * 用户名
+    */
+    private String username;
+    /**
+    * 密码
+    */
     private String password;
-    private int sex;
-    private String identityCode;
+    /**
+    * 性别(1:男 0：女)
+    */
+    private Integer sex;
+    /**
+    * 身份证号
+    */
+    private String identitycode;
+    /**
+    * 邮箱
+    */
     private String email;
+    /**
+    * 手机
+    */
     private String mobile;
-    private int type;
+    /**
+    * 类型（1：后台 0:前台）
+    */
+    private Integer type;
 
-    public EasybuyUser() {
-        super();
-    }
 
-    public EasybuyUser(int id, String loginName, String userName, String password, int sex, String identityCode, String email, String mobile, int type) {
-        this.id = id;
-        this.loginName = loginName;
-        this.userName = userName;
-        this.password = password;
-        this.sex = sex;
-        this.identityCode = identityCode;
-        this.email = email;
-        this.mobile = mobile;
-        this.type = type;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getLoginname() {
+        return loginname;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setLoginname(String loginname) {
+        this.loginname = loginname;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -59,20 +80,20 @@ public class EasybuyUser {
         this.password = password;
     }
 
-    public int getSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
     }
 
-    public String getIdentityCode() {
-        return identityCode;
+    public String getIdentitycode() {
+        return identitycode;
     }
 
-    public void setIdentityCode(String identityCode) {
-        this.identityCode = identityCode;
+    public void setIdentitycode(String identitycode) {
+        this.identitycode = identitycode;
     }
 
     public String getEmail() {
@@ -91,11 +112,12 @@ public class EasybuyUser {
         this.mobile = mobile;
     }
 
-    public int getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(Integer type) {
         this.type = type;
     }
+
 }

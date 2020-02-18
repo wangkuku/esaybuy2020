@@ -1,29 +1,42 @@
 package com.buy.entity;
 
-public class EasybuyProductCategory {
-    private int id;
+import java.io.Serializable;
+
+/**
+ * (EasybuyProductCategory)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:44:05
+ */
+public class EasybuyProductCategory implements Serializable {
+    private static final long serialVersionUID = -71513955657109475L;
+    /**
+    * 主键
+    */
+    private Integer id;
+    /**
+    * 名称
+    */
     private String name;
-    private int parentId;
-    private int type;
-    private String iconClass;
+    /**
+    * 父级目录id
+    */
+    private Integer parentid;
+    /**
+    * 级别(1:一级 2：二级 3：三级)
+    */
+    private Integer type;
+    /**
+    * 图标
+    */
+    private String iconclass;
 
-    public EasybuyProductCategory() {
-        super();
-    }
 
-    public EasybuyProductCategory(int id, String name, int parentId, int type, String iconClass) {
-        this.id = id;
-        this.name = name;
-        this.parentId = parentId;
-        this.type = type;
-        this.iconClass = iconClass;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -35,27 +48,28 @@ public class EasybuyProductCategory {
         this.name = name;
     }
 
-    public int getParentId() {
-        return parentId;
+    public Integer getParentid() {
+        return parentid;
     }
 
-    public void setParentId(int parentId) {
-        this.parentId = parentId;
+    public void setParentid(Integer parentid) {
+        this.parentid = parentid;
     }
 
-    public int getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
-    public String getIconClass() {
-        return iconClass;
+    public String getIconclass() {
+        return iconclass;
     }
 
-    public void setIconClass(String iconClass) {
-        this.iconClass = iconClass;
+    public void setIconclass(String iconclass) {
+        this.iconclass = iconclass;
     }
+
 }

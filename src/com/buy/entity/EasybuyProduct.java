@@ -1,39 +1,62 @@
 package com.buy.entity;
 
-public class EasybuyProduct {
-    private int id;
+import java.io.Serializable;
+
+/**
+ * (EasybuyProduct)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:44:05
+ */
+public class EasybuyProduct implements Serializable {
+    private static final long serialVersionUID = -80088477978365177L;
+    /**
+    * 主键
+    */
+    private Integer id;
+    /**
+    * 名称
+    */
     private String name;
+    /**
+    * 描述
+    */
     private String description;
-    private float price;
-    private int stock;
-    private int categoryLovel1Id;
-    private int categoryLovel2Id;
-    private int categoryLovel3Id;
-    private String fileName;
-    private int isDelete;
+    /**
+    * 价格
+    */
+    private Object price;
+    /**
+    * 库存
+    */
+    private Integer stock;
+    /**
+    * 分类1
+    */
+    private Integer categorylevel1id;
+    /**
+    * 分类2
+    */
+    private Integer categorylevel2id;
+    /**
+    * 分类3
+    */
+    private Integer categorylevel3id;
+    /**
+    * 文件名称
+    */
+    private String filename;
+    /**
+    * 是否删除(1：删除 0：未删除)
+    */
+    private Integer isdelete;
 
-    public EasybuyProduct(int id, String name, String description, float price, int stock, int categoryLovel1Id, int categoryLovel2Id, int categoryLovel3Id, String fileName, int isDelete) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.stock = stock;
-        this.categoryLovel1Id = categoryLovel1Id;
-        this.categoryLovel2Id = categoryLovel2Id;
-        this.categoryLovel3Id = categoryLovel3Id;
-        this.fileName = fileName;
-        this.isDelete = isDelete;
-    }
 
-    public EasybuyProduct() {
-        super();
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -53,59 +76,60 @@ public class EasybuyProduct {
         this.description = description;
     }
 
-    public float getPrice() {
+    public Object getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Object price) {
         this.price = price;
     }
 
-    public int getStock() {
+    public Integer getStock() {
         return stock;
     }
 
-    public void setStock(int stock) {
+    public void setStock(Integer stock) {
         this.stock = stock;
     }
 
-    public int getCategoryLovel1Id() {
-        return categoryLovel1Id;
+    public Integer getCategorylevel1id() {
+        return categorylevel1id;
     }
 
-    public void setCategoryLovel1Id(int categoryLovel1Id) {
-        this.categoryLovel1Id = categoryLovel1Id;
+    public void setCategorylevel1id(Integer categorylevel1id) {
+        this.categorylevel1id = categorylevel1id;
     }
 
-    public int getCategoryLovel2Id() {
-        return categoryLovel2Id;
+    public Integer getCategorylevel2id() {
+        return categorylevel2id;
     }
 
-    public void setCategoryLovel2Id(int categoryLovel2Id) {
-        this.categoryLovel2Id = categoryLovel2Id;
+    public void setCategorylevel2id(Integer categorylevel2id) {
+        this.categorylevel2id = categorylevel2id;
     }
 
-    public int getCategoryLovel3Id() {
-        return categoryLovel3Id;
+    public Integer getCategorylevel3id() {
+        return categorylevel3id;
     }
 
-    public void setCategoryLovel3Id(int categoryLovel3Id) {
-        this.categoryLovel3Id = categoryLovel3Id;
+    public void setCategorylevel3id(Integer categorylevel3id) {
+        this.categorylevel3id = categorylevel3id;
     }
 
-    public String getFileName() {
-        return fileName;
+    public String getFilename() {
+        return filename;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 
-    public int getIsDelete() {
-        return isDelete;
+    public Integer getIsdelete() {
+        return isdelete;
     }
 
-    public void setIsDelete(int isDelete) {
-        this.isDelete = isDelete;
+    public void setIsdelete(Integer isdelete) {
+        this.isdelete = isdelete;
     }
+
 }

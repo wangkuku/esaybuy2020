@@ -1,61 +1,75 @@
 package com.buy.entity;
 
-public class EasybuyOrderDetail {
-    private int id;
-    private int orderId;
-    private int productId;
-    private int quantity;
-    private float cost;
+import java.io.Serializable;
 
-    public EasybuyOrderDetail() {
-        super();
-    }
+/**
+ * (EasybuyOrderDetail)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:44:04
+ */
+public class EasybuyOrderDetail implements Serializable {
+    private static final long serialVersionUID = 789872194818973229L;
+    /**
+    * 主键
+    */
+    private Integer id;
+    /**
+    * 订单主键
+    */
+    private Integer orderid;
+    /**
+    * 商品主键
+    */
+    private Integer productid;
+    /**
+    * 数量
+    */
+    private Integer quantity;
+    /**
+    * 消费
+    */
+    private Object cost;
 
-    public EasybuyOrderDetail(int id, int orderId, int productId, int quantity, float cost) {
-        this.id = id;
-        this.orderId = orderId;
-        this.productId = productId;
-        this.quantity = quantity;
-        this.cost = cost;
-    }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public Integer getOrderid() {
+        return orderid;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
+    public void setOrderid(Integer orderid) {
+        this.orderid = orderid;
     }
 
-    public int getProductId() {
-        return productId;
+    public Integer getProductid() {
+        return productid;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProductid(Integer productid) {
+        this.productid = productid;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
-    public float getCost() {
+    public Object getCost() {
         return cost;
     }
 
-    public void setCost(float cost) {
+    public void setCost(Object cost) {
         this.cost = cost;
     }
+
 }

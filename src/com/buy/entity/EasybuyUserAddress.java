@@ -1,40 +1,56 @@
 package com.buy.entity;
 
-public class EasybuyUserAddress {
-    private int id;
-    private int userId;
+import java.util.Date;
+import java.io.Serializable;
+
+/**
+ * (EasybuyUserAddress)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:44:05
+ */
+public class EasybuyUserAddress implements Serializable {
+    private static final long serialVersionUID = -29609036889120286L;
+    /**
+    * 主键id
+    */
+    private Integer id;
+    /**
+    * 用户主键
+    */
+    private Integer userid;
+    /**
+    * 地址
+    */
     private String address;
-    private String createTime;
-    private int isDefault;
+    /**
+    * 创建时间
+    */
+    private Date createtime;
+    /**
+    * 是否是默认地址（1:是 0否）
+    */
+    private Integer isdefault;
+    /**
+    * 备注
+    */
     private String remark;
 
-    public EasybuyUserAddress() {
-        super();
-    }
 
-    public EasybuyUserAddress(int id, int userId, String address, String createTime, int isDefault, String remark) {
-        this.id = id;
-        this.userId = userId;
-        this.address = address;
-        this.createTime = createTime;
-        this.isDefault = isDefault;
-        this.remark = remark;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public Integer getUserid() {
+        return userid;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
     public String getAddress() {
@@ -45,20 +61,20 @@ public class EasybuyUserAddress {
         this.address = address;
     }
 
-    public String getCreateTime() {
-        return createTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
-    public int getIsDefault() {
-        return isDefault;
+    public Integer getIsdefault() {
+        return isdefault;
     }
 
-    public void setIsDefault(int isDefault) {
-        this.isDefault = isDefault;
+    public void setIsdefault(Integer isdefault) {
+        this.isdefault = isdefault;
     }
 
     public String getRemark() {
@@ -68,4 +84,5 @@ public class EasybuyUserAddress {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 }

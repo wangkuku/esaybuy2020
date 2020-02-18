@@ -1,27 +1,38 @@
 package com.buy.entity;
 
-public class EasybuyNews {
-    private int id;
+import java.io.Serializable;
+
+/**
+ * (EasybuyNews)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:42:55
+ */
+public class EasybuyNews implements Serializable {
+    private static final long serialVersionUID = -24942484460444348L;
+    /**
+    * 主键
+    */
+    private Integer id;
+    /**
+    * 标题
+    */
     private String title;
+    /**
+    * 内容
+    */
     private String content;
-    private String createTime;
+    /**
+    * 创建时间
+    */
+    private String createtime;
 
-    public EasybuyNews() {
-        super();
-    }
 
-    public EasybuyNews(int id, String title, String content, String createTime) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.createTime = createTime;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -41,11 +52,12 @@ public class EasybuyNews {
         this.content = content;
     }
 
-    public String getCreateTime() {
-        return createTime;
+    public String getCreatetime() {
+        return createtime;
     }
 
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setCreatetime(String createtime) {
+        this.createtime = createtime;
     }
+
 }

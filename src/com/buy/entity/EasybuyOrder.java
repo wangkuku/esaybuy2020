@@ -1,71 +1,98 @@
 package com.buy.entity;
 
-public class EasybuyOrder {
-    private int id;
-    private int userId;
-    private String loginName;
-    private String createTime;
-    private float cost;
-    private String serialNumber;
+import java.util.Date;
+import java.io.Serializable;
 
-    public EasybuyOrder() {
-        super();
-    }
+/**
+ * (EasybuyOrder)实体类
+ *
+ * @author makejava
+ * @since 2020-02-18 16:44:04
+ */
+public class EasybuyOrder implements Serializable {
+    private static final long serialVersionUID = -35351037890892353L;
+    /**
+    * 主键
+    */
+    private Integer id;
+    /**
+    * 用户主键
+    */
+    private Integer userid;
+    
+    private String loginname;
+    /**
+    * 用户地址
+    */
+    private String useraddress;
+    /**
+    * 创建时间
+    */
+    private Date createtime;
+    /**
+    * 总消费
+    */
+    private Object cost;
+    /**
+    * 订单号
+    */
+    private String serialnumber;
 
-    public EasybuyOrder(int id, int userId, String loginName, String createTime, float cost, String serialNumber) {
-        this.id = id;
-        this.userId = userId;
-        this.loginName = loginName;
-        this.createTime = createTime;
-        this.cost = cost;
-        this.serialNumber = serialNumber;
-    }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public Integer getUserid() {
+        return userid;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getLoginname() {
+        return loginname;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setLoginname(String loginname) {
+        this.loginname = loginname;
     }
 
-    public String getCreateTime() {
-        return createTime;
+    public String getUseraddress() {
+        return useraddress;
     }
 
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setUseraddress(String useraddress) {
+        this.useraddress = useraddress;
     }
 
-    public float getCost() {
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
+    public Object getCost() {
         return cost;
     }
 
-    public void setCost(float cost) {
+    public void setCost(Object cost) {
         this.cost = cost;
     }
 
-    public String getSerialNumber() {
-        return serialNumber;
+    public String getSerialnumber() {
+        return serialnumber;
     }
 
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
+    public void setSerialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
     }
+
 }
