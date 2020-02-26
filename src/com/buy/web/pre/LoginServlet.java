@@ -59,4 +59,17 @@ public class LoginServlet extends AbsractServlet {
         }
         return result;
     }
+    /***
+     * 用户注销
+     */
+    public String  logOut(HttpServletRequest request,HttpServletResponse response)throws Exception{
+
+        //删除session中的用户记录
+        request.getSession().removeAttribute("loginUser");
+        //给前台返回结果
+        ReturnResult result=new ReturnResult();
+        result.returnSuccess("注销成功！");
+        //注销后返回登录页面
+        return "/front/home";
+    }
 }
