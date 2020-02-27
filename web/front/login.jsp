@@ -109,9 +109,10 @@
             data:{loginName:loginName,password:password,action:"login"},
             success:function (json) {
                 if (json.status==1){
+                    alert("登录成功！");
                     location.href="${ctx}/home?action=index"
                 }else {
-                    alert("no")
+                    alert("登录失败！");
                 }
             },error:function () {
                 alert("error")

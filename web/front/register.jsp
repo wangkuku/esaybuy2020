@@ -70,41 +70,48 @@
                     <span class="fr">已有商城账号，<a href="Login.html" style="color:#ff4e00;">我要登录</a></span>
                 </td>
               </tr>
+                <tr height="50">
+                    <td align="right"><font color="#ff4e00">*</font>&nbsp;登录名 &nbsp;</td>
+                    <td><input type="text" value="" class="l_user" id="loginName" /></td>
+                </tr>
               <tr height="50">
                 <td align="right"><font color="#ff4e00">*</font>&nbsp;用户名 &nbsp;</td>
-                <td><input type="text" value="" class="l_user" /></td>
+                <td><input type="text" value="" class="l_user" id="userName"/></td>
               </tr>
               <tr height="50">
                 <td align="right"><font color="#ff4e00">*</font>&nbsp;密码 &nbsp;</td>
-                <td><input type="password" value="" class="l_pwd" /></td>
+                <td><input type="password" value="" class="l_pwd" id="pwd"/></td>
               </tr>
               <tr height="50">
                 <td align="right"><font color="#ff4e00">*</font>&nbsp;确认密码 &nbsp;</td>
-                <td><input type="password" value="" class="l_pwd" /></td>
+                <td><input type="password" value="" class="l_pwd" id="repwd"/></td>
               </tr>
               <tr height="50">
                 <td align="right"><font color="#ff4e00">*</font>&nbsp;邮箱 &nbsp;</td>
-                <td><input type="text" value="" class="l_email" /></td>
+                <td><input type="text" value="" class="l_email" id="email"/></td>
               </tr>
               <tr height="50">
                 <td align="right"><font color="#ff4e00">*</font>&nbsp;手机 &nbsp;</td>
-                <td><input type="text" value="" class="l_tel" /></td>
+                <td><input type="text" value="" class="l_tel" id="phone"/></td>
               </tr>
               <tr height="50">
-                <td align="right">邀请人会员名 &nbsp;</td>
-                <td><input type="text" value="" class="l_mem" /></td>
+                <td align="right">性别 &nbsp;</td>
+                  <td>
+                      <input type="radio" value="0" checked />男
+                      <input type="radio" value="1" />女
+                  </td>
               </tr>
               <tr height="50">
-                <td align="right">邀请人ID号 &nbsp;</td>
-                <td><input type="text" value="" class="l_num" /></td>
+                <td align="right">身份证号 &nbsp;</td>
+                  <td><input type="text" value="" class="l_mem" id="idCode"/></td>
               </tr>
-              <tr height="50">
+             <%-- <tr height="50">
                 <td align="right"> <font color="#ff4e00">*</font>&nbsp;验证码 &nbsp;</td>
                 <td>
                     <input type="text" value="" class="l_ipt" />
                     <a href="#" style="font-size:12px; font-family:'宋体';">换一张</a>
                 </td>
-              </tr>
+              </tr>--%>
               <tr>
               	<td>&nbsp;</td>
                 <td style="font-size:12px; padding-top:20px;">
@@ -115,7 +122,7 @@
               </tr>
               <tr height="60">
               	<td>&nbsp;</td>
-                <td><input type="submit" value="立即注册" class="log_btn" /></td>
+                <td><input type="submit" value="立即注册" class="log_btn" onclick="reg()"/></td>
               </tr>
             </table>
             </form>

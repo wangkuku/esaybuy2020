@@ -133,7 +133,7 @@
         	<span class="fl">
                 <c:if test="${sessionScope.loginUser == null}">
                     你好，请<a href="${ctx}/front/login.jsp">登录</a>&nbsp;
-                    <a href="${ctx}/front/regist.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;
+                    <a href="${ctx}/front/register.jsp" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;
                 </c:if>
                 <c:if test="${sessionScope.loginUser != null}">
                     用户<a href=#" style="color: #0071c6">【${sessionScope.loginUser.loginname}】登录</a>&nbsp;&nbsp;
@@ -187,7 +187,7 @@
     </div>
 </div>
 <div class="top">
-    <div class="logo"><a href="Index.html"><img src="images/logo.png" /></a></div>
+    <div class="logo"><a href="${ctx}/home?action=index"><img src="images/logo.png" /></a></div>
     <div class="search">
     	<form>
         	<input type="text" value="" class="s_ipt" />
@@ -525,11 +525,16 @@
             	<span class="fr"><a href="#">更多 ></a></span>新闻资讯
             </div>
             <ul>
-            	<li><span>[ 特惠 ]</span><a href="#">掬一轮明月 表无尽惦念</a></li>
-            	<li><span>[ 公告 ]</span><a href="#">好奇金装成长裤新品上市</a></li>
+                <c:forEach items="${newsList}" varStatus="status" var="newsList">
+                    <li><span>[ 特惠 ]</span><a href="#">${newsList.title}</a></li>
+
+                </c:forEach>
+
+
+            	<%--<li><span>[ 公告 ]</span><a href="#">好奇金装成长裤新品上市</a></li>
             	<li><span>[ 特惠 ]</span><a href="#">大牌闪购 · 抢！</a></li>
             	<li><span>[ 公告 ]</span><a href="#">发福利 买车就抢千元油卡</a></li>
-            	<li><span>[ 公告 ]</span><a href="#">家电低至五折</a></li>
+            	<li><span>[ 公告 ]</span><a href="#">家电低至五折</a></li>--%>
             </ul>
             <div class="charge_t">
             	话费充值<div class="ch_t_icon"></div>
@@ -1395,7 +1400,7 @@
 
 
 <div class="top">
-    <div class="logo"><a href="${ctx}/Home?action=index"><img src="${ctx}/statics/images/logo.png"></a></div>
+    <div class="logo"><a href="${ctx}/home?action=index"><img src="${ctx}/statics/images/logo.png"></a></div>
     <div class="search">
         <form>
             <input txype="text" value="" class="s_ipt">

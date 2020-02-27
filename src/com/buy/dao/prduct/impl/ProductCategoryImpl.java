@@ -3,6 +3,7 @@ package com.buy.dao.prduct.impl;
 import com.buy.dao.prduct.IProductCategory;
 import com.buy.entity.EasybuyProductCategory;
 import com.buy.utils.DataSourceUtil;
+import com.buy.utils.ProductCategoryVo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,4 +49,43 @@ public class ProductCategoryImpl implements IProductCategory {
 
         return productCategories;
     }
+
+    @Override
+    public List<ProductCategoryVo> queryAllProductCategory() {
+        //查询一级分类的列表
+        List<ProductCategoryVo> pc1VoList = new ArrayList<ProductCategoryVo>();
+        //查询一级分类
+        List<EasybuyProductCategory> pcList = queryAllProductCategory(null);
+        //查询二级分类
+        for (EasybuyProductCategory productCategory1 : pcList) {
+            ProductCategoryVo pc1Vo = new ProductCategoryVo();
+            pc1Vo.setProductCategory(productCategory1);
+            //查询二级分类的VO
+            List<ProductCategoryVo> pc2VoList = new ArrayList<ProductCategoryVo>();
+            //查询二级分类
+            List<EasybuyProductCategory> pc2List
+                    = queryAllProductCategory(productCategory1.getId().toString());
+            for (EasybuyProductCategory productCategory2 : pc2List) {
+                ProductCategoryVo pc2Vo = new ProductCategoryVo();
+                pc2Vo.setProductCategory(productCategory2);
+                //查询三级分类的VO
+                List<ProductCategoryVo> pc3VoList = new ArrayList<ProductCategoryVo>();
+                //查询三级分类
+                List<EasybuyProductCategory> pc3List
+                        = queryAllProductCategory(productCategory2.getId().toString());
+                for (EasybuyProductCategory productCategory3 : pc3List) {
+                    ProductCategoryVo pc3Vo = new ProductCategoryVo();
+                    pc3Vo.setProductCategory(productCategory3);
+                    //
+                    pc3VoList.add(pc3Vo);
+                }
+                pc2Vo.setProductCategoryVoList(pc3VoList);
+                pc2VoList.add(pc2Vo);
+            }
+            pc1Vo.setProductCategoryVoList(pc1VoList);
+            pc1VoList.add(pc1Vo);
+        }
+        return pc1VoList;
+    }
 }
+
